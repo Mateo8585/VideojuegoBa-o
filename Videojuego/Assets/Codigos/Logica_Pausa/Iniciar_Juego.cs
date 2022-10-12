@@ -19,6 +19,8 @@ public class Iniciar_Juego : MonoBehaviour
     public void PrimerNivelJuego(){
 
         SceneManager.LoadScene("SampleScene");
+        PuntosExperiencia.Contador_Experiencia = 0;
+        PuntosExperiencia.Contador_Rollos = 0;
 
     }//Fin método
 

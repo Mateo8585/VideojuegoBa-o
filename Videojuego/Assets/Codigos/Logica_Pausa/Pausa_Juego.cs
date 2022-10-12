@@ -29,6 +29,8 @@ public class Pausa_Juego : MonoBehaviour
     public void Regresar_Menu(){
         SceneManager.LoadScene("Menu_Principal");
         Time.timeScale = 1;
+        PuntosExperiencia.Contador_Experiencia = 0;
+        PuntosExperiencia.Contador_Rollos = 0;
     }//Fin método
 
 }//Fin clase

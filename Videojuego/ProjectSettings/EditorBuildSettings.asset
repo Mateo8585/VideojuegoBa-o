@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu_Principal.unity
     guid: 135fc8661eb1aaa43b2f5a584ccc9644
+  - enabled: 1
+    path: Assets/Scenes/Interfaz_Puntaje.unity
+    guid: 5e34942bd297d2b4b8aaf073708ec279
   m_configObjects: {}
