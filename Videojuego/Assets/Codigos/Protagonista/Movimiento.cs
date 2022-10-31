@@ -17,6 +17,9 @@ public class Movimiento : MonoBehaviour
 
     private float Distancia_Suelo; 
 
+    //Para ejecutar la animación de salto
+    public GameObject charModel;
+
     void Start()
     {
         
@@ -54,11 +57,16 @@ public class Movimiento : MonoBehaviour
 
         }//Fin primera condición
 
+        //Condiciones que ejecutan la animación de salto
+        if(!IsGrounded()){
+            charModel.GetComponent<Animator>().Play("Jumping");
+        }else{
+            charModel.GetComponent<Animator>().Play("Standard Run");
+        }//Fin condición
+
         //Devuelve un true para que entre en la condición
         if(Input.GetKeyDown(KeyCode.Space) && IsGrounded()){
-
             FisicaObjeto.AddForce(new Vector3(0, Fuerza_Salto, 0), ForceMode.Impulse);
-
         }//Fin condición
         
     }//Fin método
